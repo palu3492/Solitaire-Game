@@ -10,7 +10,7 @@ screen = pygame.display.set_mode(window_size)
 pygame.display.set_caption("Solitaire")
 game_is_running = True
 
-backgroundImage = pygame.image.load("background.jpg")
+backgroundImage = pygame.image.load("assets/background.jpg")
 
 deck = Deck()
 deck.shuffle()
@@ -28,8 +28,8 @@ score = 0
 frame = 0
 time = 0
 
-place_sound = pygame.mixer.Sound('flip.wav')
-shuffle_sound = pygame.mixer.Sound('shuffle.wav')
+place_sound = pygame.mixer.Sound('assets/flip.wav')
+shuffle_sound = pygame.mixer.Sound('assets/shuffle.wav')
 shuffle_sound.play()
 
 def clicked_new_card(mouse_x, mouse_y):
@@ -202,14 +202,11 @@ tables = create_tables()
 foundations = create_foundations()
 
 def message_display(text, cords):
-    large_text = pygame.font.Font('freesansbold.ttf',17)
+    large_text = pygame.font.Font('assets/freesansbold.ttf',17)
     text_surface = large_text.render(text, True, (255,255,255))
     TextSurf, TextRect = text_surface, text_surface.get_rect()
     TextRect.center = cords
     screen.blit(TextSurf, TextRect)
-#BUGS BUGS
-#holding card goes underneath other cards
-#dragging cards into foundations
 
 def game_loop():
     global holding_cards
