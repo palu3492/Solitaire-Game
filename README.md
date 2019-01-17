@@ -1,4 +1,4 @@
-# Solitaire-Python
+# Solitaire
 2D Solitaire Game written in Python using PyGame
 
 Run Game.py to play with the PyGame package installed (Python 3.6)
